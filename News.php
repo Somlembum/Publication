@@ -4,7 +4,15 @@ class News extends Publication
 {
     static public $type = 'NEWS';    
     
-    public static function news5($title = '',$content = '',$author = '',$date = '')
+    public function __construct($title = '',$content = '',$author = '',$date = '') 
+    {
+        $this->title = $title;
+        $this->content = $content;
+        $this->author = $author;
+        $this->date = date('d,m,Y');
+    }
+    
+    public static function news5()
     {
         for ($i==1; $i<6; $i++)
         {
