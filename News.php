@@ -14,11 +14,14 @@ class News extends Publication
     
     public static function news5()
     {
+        $news5 = [];
         for ($i==1; $i<6; $i++)
         {
-            $news5 = [$title, $content, $author, $date];
+            $news = new News('10 самых таинственных теорий заговоров!','Правительство использует для слежки насекомых, грызунов и дроны','Игорь Печкин');
+            $news5[] = $news;
         }
         return $news5;
+        var_dump($news5);
     }
 }
 //public function print()

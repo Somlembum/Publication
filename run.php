@@ -10,9 +10,18 @@ function my_autoload($className)
 }
 spl_autoload_register('my_autoload');
 
-$publ1 = new News('10 самых таинственных теорий заговоров!','Правительство использует для слежки насекомых, грызунов и дроны','Игорь Печкин');
-$publ1::news5();
-var_dump ($publ1);
+
+
+$n = News::news5();
+foreach ($n as $new)
+{
+    $new->printer();
+    echo "\n";
+};
+//foreach($publ1 as $n)
+//{
+//$n->printer();
+//}
 
 //$publ1 = new Article('10 самых таинственных теорий заговоров!','Правительство использует для слежки насекомых, грызунов и дроны','Игорь Печкин');
 //$publ1->printer();
